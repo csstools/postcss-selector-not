@@ -23,12 +23,17 @@ function explodeSelector(pseudoClass, selector) {
   return selector
 }
 
+const patternCache = {}
+
 function locatePseudoClass(selector, pseudoClass) {
+  patternCache[pseudoClass] = patternCache[pseudoClass]
+    || new RegExp(`([^\\\\]|^)${pseudoClass}`)
+
   // The regex is used to ensure that selectors with
   // escaped colons in them are treated properly
   // Ex: .foo\:not-bar is a valid CSS selector
   // But it is not a reference to a pseudo selector
-  const pattern = new RegExp(`([^\\\\]|^)${pseudoClass}`)
+  const pattern = patternCache[pseudoClass]
   const position = selector.search(pattern)
 
   if (position === -1) {
