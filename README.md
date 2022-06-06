@@ -1,3 +1,6 @@
+<div align="center">⚠️ PostCSS Selector Not was moved to <a href="https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-selector-not">@csstools/postcss-plugins</a>. ⚠️ <br>
+<a href="https://github.com/csstools/postcss-plugins/discussions/75">Read the announcement</a></div>
+
 # postcss-selector-not [![CSS Standard Status](https://cssdb.org/images/badges/not-pseudo-class.svg)](https://cssdb.org/#not-pseudo-class) [<img alt="build status" src="https://github.com/postcss/postcss-selector-not/workflows/test/badge.svg" height="20">][cli-url]
 
 > PostCSS plugin to transform `:not()` W3C CSS level 4 pseudo class to :not() CSS level 3 selectors
